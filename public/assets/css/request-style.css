@@ -1,0 +1,655 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #F7F7F7;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* PAGE SCROLLBAR DESIGN */
+/* width */
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px grey;
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+    background: #808080;
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+    background: #0C7087;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+/*-----------------------------------------
+    TYPOGRAPHY
+------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+}
+
+h1 {
+    color: #0C7087;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 50px;
+}
+
+h2 {
+    color: #0C7087;
+    font-size: 23px;
+    line-height: 40px;
+    font-weight: 400;
+    margin-top: 0;
+}
+
+h3 {
+    font-size: 20px;
+    line-height: 32px;
+}
+
+h4 {
+    color: #525252;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+p {
+    color: #3B3838;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0.5px;
+}
+
+/*-----------------------------------------
+    BUTTONS
+------------------------------------------*/
+
+
+
+/*-----------------------------------------
+    GENERAL
+------------------------------------------*/
+
+
+/*-----------------------------------------
+    MENU
+------------------------------------------*/
+
+header {
+    background-color: rgba(226, 237, 240, 0.5);
+
+}
+
+#app-logo {
+    width: 1.5rem;
+}
+
+.app-logo-text {
+    color: #2B3E4B;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.app-logo-text:hover {
+    color: #2B3E4B;
+}
+
+.navbar .navbar-brand {
+    font-weight: bold;
+    font-size: 24px;
+    color: #063E4B;
+}
+
+.navbar .navbar-brand:hover {
+    color: #063E4B;
+}
+
+.navbar .navbar-nav .nav-link {
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    transition: all-ease-in 0.4s;
+    color: #3B3838;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    background: transparent;
+    color: #3B3838;
+}
+
+.navbar .navbar-nav .nav-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: transparent;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar .navbar-nav .nav-link:hover::after {
+    width: 100%;
+    background: #0C7087;
+    color: #0C7087;
+}
+
+/*-----------------------------------------
+    HOME
+------------------------------------------*/
+
+#home {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+#home h1 {
+    line-height: 1.2em;
+    margin-top: 250px;
+}
+
+#home .iconbg {
+    width: 100%;
+    max-width: 425px;
+    float: right;
+}
+
+
+
+/*-----------------------------------------
+    SERVICES
+------------------------------------------*/
+.text-brown-500,
+select:invalid,
+input[type=search]::placeholder,
+input[type=text]::placeholder,
+input[type=number]::placeholder,
+input[type=email]::placeholder {
+    color: #B8B8B8 !important;
+}
+
+#services {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(105.76deg, #F7F7F7 0%, #E6E6E6 0.01%, #18D4FF 100%);
+    margin-top: 250px;
+    top: 90%;
+}
+
+#services:before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    width: 100%;
+    height: 50px;
+    background-image: url('/images/wavestop.svg');
+}
+
+#services:after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+    height: 50px;
+    background-image: url('/images/wavesbottom.svg');
+}
+
+#services .header {
+    font-size: 21px;
+    font-weight: bold;
+    color: #063E4B;
+    padding-top: 50px;
+}
+
+#services .docuBG {
+    width: 100%;
+    max-width: 450px;
+}
+
+#services .subheader {
+    font-size: 19px;
+    font-weight: 400;
+}
+
+#services .note {
+    color: #063E4B;
+}
+
+#services .button {
+    position: relative;
+    display: block;
+    background: transparent;
+    border: 2px solid #F7F7F7;
+    padding: 12px 20px;
+    width: 200px;
+    margin-top: 20px;
+    transition: color 0.4s ease-in;
+    color: rgb(59, 59, 59);
+    border-radius: 12px;
+    z-index: 1;
+}
+
+#services .button:hover {
+    color: #F7F7F7;
+}
+
+#services .button::before {
+    background: #0C7087;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transform: scaleX(0);
+    border-radius: 12px;
+}
+
+#services .button:hover::before {
+    transform: scaleX(1);
+}
+
+.grayed:placeholder-shown {
+    background-color: white;
+}
+
+.grayed:not(:placeholder-shown) {
+    color: black;
+}
+
+.multiselect-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.select-list {
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(70, 70, 70);
+    background: #fff;
+    position: absolute;
+    width: 100%;
+}
+
+.select-list .title {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid #555;
+    border-radius: 10px;
+    padding: 7px 35px 7px 15px;
+    width: 100%;
+}
+
+.select-list .title::after {
+    position: absolute;
+    top: 30%;
+    right: 15px;
+    display: inline-block;
+    content: '>';
+    margin-left: 15px;
+    font-size: 14px;
+    transform: rotate(90deg) scale(1, 2);
+}
+
+.select-list .select-options {
+    margin-top: 5px;
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 500;
+    border: 1px solid #555;
+    border-radius: 10px;
+    background: #fff;
+    padding: 5px 0;
+}
+
+.select-list .select-options .option {
+    position: relative;
+}
+
+.select-list .select-options .option label {
+    display: inline-block;
+    padding: 10px 30px 10px 10px;
+    color: rgb(158, 158, 158);
+    cursor: pointer;
+    width: 100%;
+}
+
+.select-list .select-options .option input {
+    position: absolute;
+    top: 25%;
+    right: 5%;
+    opacity: 0;
+}
+
+.select-list .select-options .option input:checked+label {
+    color: #555;
+}
+
+.select-list .select-options .option input:checked+label:after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 8px;
+    height: 16px;
+    border: solid #555;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.select-list .select-options label:hover {
+    color: #555;
+}
+
+.empty-col {
+    padding: 0;
+}
+
+.form-btn {
+    border-radius: 10px;
+}
+
+.btn-cancel {
+    background-color: rgb(184, 184, 184);
+    border: 0;
+}
+
+.btn-next {
+    background: #0C7087;
+}
+
+.request-img {
+    position: relative;
+    width: 100%;
+}
+
+.request-img img {
+    width: 100%;
+}
+
+.confirm-img {
+    position: relative;
+    width: 100%;
+}
+
+.confirm-img img {
+    width: 50%;
+    display:block;
+    margin: 0px auto;
+    margin-top: 50px;
+}
+
+.main-cta:hover,
+.main-cta:active,
+.main-cta:focus {
+    background: #00BBD9;
+}
+
+.notice {
+    position: absolute;
+    top: -17px;
+}
+
+/*-----------------------------------------
+    CONTACT or FOOTER
+------------------------------------------*/
+.footer,
+.confirm-footer {
+    position: relative;
+    width: 100%; 
+    text-align: center;
+    padding-top: 10px;
+}
+
+@media only screen and (min-width: 540px) {
+    #app-logo {
+        width: 2rem;
+    }
+    
+    .app-logo-text {
+        font-size: 1.5rem;
+    }
+
+    .empty-col {
+        padding: 8px 0px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    #app-logo {
+        width: 2rem;
+    }
+    
+    .app-logo-text {
+        font-size: 1.5rem;
+    }
+
+    .request-img,
+    .confirm-img {
+        width: 20%;
+        margin-left: auto;
+        position: relative;
+        bottom: 0px;
+        right: 0px;
+    }
+
+    .request-img::after, 
+    .confirm-img::after {
+        position: absolute;
+        content: "";
+        bottom: 0;
+    }
+
+    .request-img img {
+        position: absolute;
+        top: -200px;
+        left: -180px;
+        width: 400px;
+    } 
+    
+    .confirm-img img {
+        position: absolute;
+        top: -210px;
+        left: 0px;
+        width: 150px;
+    }
+
+    .footer {
+        position: relative;
+        padding-left: 3%;
+        float: left;
+        bottom: -130px;
+        text-align: left;
+    }
+
+    .confirm-footer {
+        position: relative;
+        padding-left: 5%;
+        float: left;
+        bottom: -80px;
+        text-align: left;
+    }
+
+    .show-footer {
+        top: 20vw; 
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    #app-logo {
+        width: 3rem;
+    }
+
+    .request-img img {
+        left: -150px;
+    }
+
+    .confirm-img img {
+        top: -285px;
+        left: 20px;
+        width: 190px;
+    }
+
+    .confirm-footer {
+        padding-left: 4%;
+        bottom: -80px;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .show-footer {
+        top: 13.5vw; 
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    #home h1 {
+        margin-top: 180px;
+    }
+
+    #home .iconbg {
+        max-width: 240px;
+        left: 50%;
+    }
+
+    #services {
+        height: calc(100% + 250px);
+    }
+
+    #services .button {
+        margin: 20px auto;
+    }
+
+    #services .hearts {
+        max-width: 50px;
+    }
+
+}
+
+@media only screen and (max-width: 900px) and (min-width: 350px) {
+    #home h1 {
+        margin-top: 180px;
+    }
+
+    #home .iconbg {
+        max-width: 240px;
+        left: 50%;
+    }
+
+    #services {
+        height: calc(100% + 200px);
+        margin-top: 180px;
+    }
+
+    #services .button {
+        margin: 20px auto;
+    }
+
+    #services .hearts {
+        max-width: 50px;
+    }
+
+    #feedback .feedbackicon {
+        width: 100%;
+    }
+}
+
+/*-----------------------------------------
+    FEEDBACK
+------------------------------------------*/
+#newResident {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+}
+
+
+.fbutton {
+    border-radius: 10px;
+    background: #0C7087;
+    width: 120px;
+    height: 35px;
+    border: 0px;
+    color: #F7F7F7;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.form-control {
+    border-radius: 10px;
+    background: #E9E9E9;
+    color: #CCCCCC;
+    border: 0px;
+    resize: none;
+}
+
+.outerbox {
+    width: 700px;
+    height: 700px;
+    margin: auto;
+    padding-top: 42px;
+    background: #C8DFF0;
+    border-radius: 20px;
+}
+
+.innerbox {
+    width: 625px;
+    height: 625px;
+    margin: auto;
+    background: #F7F7F7;
+    border-radius: 20px;
+    padding-top: 5%;
+    padding-bottom: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    position: relative;
+}
+
+textarea::-webkit-scrollbar {
+    width: 8px;
+    background: #DAE3F3;
+    border-radius: 0 8px 8px 0;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background: #0C7087;
+    border-radius: 0 8px 8px 0;
+}
+
+a {
+    color: #525252;
+    text-decoration: solid;
+}

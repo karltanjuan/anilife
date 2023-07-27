@@ -1,0 +1,49 @@
+/* BMS - LOGIN PAGE DESIGN */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #F7F7F7;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* PAGE SCROLLBAR DESIGN */
+/* width */
+body::-webkit-scrollbar { width: 12px; }
+  
+/* Track */
+body::-webkit-scrollbar-track { box-shadow: inset 0 0 2px grey; }
+   
+/* Handle */
+body::-webkit-scrollbar-thumb { background: #808080; }
+  
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover { background: #0C7087; }
+
+
+/*-----------------------------------------
+    LOGIN
+------------------------------------------*/
+
+/*.login-col1{ background-color: #00B9E3; }*/
+.login-col1{ background-color: #7E0000; }
+.login-title { color: #3B3838; }
+.form-control { border-radius: 7px; }
+.forgot-pass { color: #7E0000; text-decoration: none; font-size: 15px; }
+/*.forgot-pass:hover { color: #0284a1; }*/
+.forgot-pass:hover { color: rgba(187, 50, 47, .8); }
+.loginBtn, .forgotPasswordBtn, .resetPasswordBtn { background-color: #7E0000; border: none; border-radius: 14px; }
+.loginBtn:hover, .forgotPasswordBtn:hover, .resetPasswordBtn:hover { background-color: rgba(187, 50, 47, .8); }
+.copyright { font-size: 13px; }
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height:  100%;
+}
